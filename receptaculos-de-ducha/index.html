@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- ================= SEO META TAGS ================= -->
+    <title>Hidrostyle | Hidromasajes Premium, Minipiscinas y Spa</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descripción SEO -->
+    <meta name="description" content="Hidrostyle - Hidromasajes premium, minipiscinas y spa, receptáculos de ducha y accesorios. 15+ años de experiencia, envíos a todo el país.">
+
+    <!-- Indexación -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://hidrostyle.com.ar/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hidrostyle | Hidromasajes Premium, Minipiscinas y Spa">
+    <meta property="og:description" content="Hidrostyle - Hidromasajes premium, minipiscinas y spa, receptáculos de ducha y accesorios. Envíos a todo el país.">
+    <meta property="og:url" content="https://hidrostyle.com.ar/">
+    <meta property="og:site_name" content="Hidrostyle">
+    <meta property="og:image" content="https://hidrostyle.com.ar/assets/og-image.jpg"> <!-- subí tu imagen -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hidrostyle | Hidromasajes Premium, Minipiscinas y Spa">
+    <meta name="twitter:description" content="Descubrí la colección de hidromasajes premium, minipiscinas y accesorios de Hidrostyle. Envíos a todo el país.">
+    <meta name="twitter:image" content="https://hidrostyle.com.ar/assets/og-image.jpg"> <!-- subí tu imagen -->
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Hidrostyle",
+      "url": "https://hidrostyle.com.ar/",
+      "logo": "https://hidrostyle.com.ar/assets/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/hidromasajesHidrostyle"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+54 11 5435-9949",
+        "contactType": "sales",
+        "areaServed": "AR",
+        "availableLanguage": "es"
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://hidrostyle.com.ar/assets/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Conocé nuestros receptáculos de ducha en acrílico sanitario disponibles en los tamaños 70×70, 80×80, 90×90 y 100×100 cm.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/catalogo.css">
+  <script src="../js/menu.js"></script>
+  <style>
+    /* Ocultamos filtros que no aplican */
+    .filters .hidden-filter {
+      display: none;
+    }
+  </style>
+</head>
+<body data-type="receptaculos">
+
+<!-- Header (igual al de la home) -->
+  <header>
+    <nav>
+      <a href="../index.html" class="logo">HIDROSTYLE</a>
+      <ul class="nav-menu">
+        <li><a href="../index.html#inicio">Inicio</a></li>
+        <li><a href="../index.html#productos">Productos</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+        <li><a href="http://listado.mercadolibre.com.ar/_CustId_85334376" target="_blank" rel="noopener">MercadoLibre</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+        <span>☰</span>
+      </button>
+    </nav>
+
+    <!-- Menú Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="../index.html#inicio">Inicio</a>
+      <a href="../index.html#productos">Productos</a>
+      <a href="../index.html#nosotros">Nosotros</a>
+      <a href="../index.html#contacto">Contacto</a>
+      <a href="http://listado.mercadolibre.com.ar/_CustId_85334376" target="_blank" rel="noopener">MercadoLibre</a>
+    </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Receptáculos de <span style="color: #00d4ff;">Ducha</span></h1>
+      <p class="subtitle">Minimalistas, prácticos y resistentes para cualquier baño moderno</p>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <div class="container">
+    <section class="filters-section">
+      <div class="filters">
+        <div class="filter-group">
+          <label>Buscar</label>
+          <input type="text" class="search-box" id="searchBox" placeholder="Buscar por modelo o medida...">
+        </div>
+
+        <!-- Selects requeridos por catalogo.js, pero ocultos -->
+        <div class="filter-group hidden-filter">
+          <label>Categoría</label>
+          <select id="categoryFilter">
+            <option value="">Todas</option>
+          </select>
+        </div>
+
+        <div class="filter-group hidden-filter">
+          <label>Tamaño</label>
+          <select id="sizeFilter">
+            <option value="">Todos</option>
+          </select>
+        </div>
+
+        <div class="filter-group hidden-filter">
+          <label>Motor</label>
+          <select id="motorFilter">
+            <option value="">Todos</option>
+          </select>
+        </div>
+
+        <div class="filter-group hidden-filter">
+          <label>Jets</label>
+          <select id="jetsFilter">
+            <option value="">Todos</option>
+          </select>
+        </div>
+
+        <button class="clear-filters" id="clearFilters">Limpiar</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Products -->
+  <div class="container">
+    <section class="products-section">
+      <div class="results-info" id="resultsInfo">Cargando receptáculos...</div>
+      <div class="loading" id="loading">
+        <div class="spinner"></div><p>Cargando...</p>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+      <div class="no-results" id="noResults" style="display:none;">
+        <h3>No se encontraron productos</h3>
+        <p>Probá otra búsqueda.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../js/getProducts.js"></script>
+</body>
+</html>
