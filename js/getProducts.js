@@ -47,7 +47,7 @@ function renderProduct(product) {
         <h3 class="product-name">${product.name}</h3>
         <span class="product-category">${product.category || "-"}</span>      <div class="product-image">
         <div class="product-image-wrapper">
-          <img src="${product.image || `../img/placeholder-${PRODUCT_TYPE}.png`}" 
+          <img src="${product.image_url || `../img/placeholder-${PRODUCT_TYPE}.png`}" 
               alt="${product.name}" />
         </div>
       </div>
