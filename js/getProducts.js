@@ -45,8 +45,16 @@ function renderProduct(product) {
     <div class="product-card">
       <div class="product-header">
         <h3 class="product-name">${product.name}</h3>
-        <span class="product-category">${product.category || "-"}</span>
+        <span class="product-category">${product.category || "-"}</span>      <div class="product-image">
+        <div class="product-image-wrapper">
+          <img src="${product.image || `../img/placeholder-${PRODUCT_TYPE}.png`}" 
+              alt="${product.name}" />
+        </div>
       </div>
+      </div>
+
+      <!-- Imagen en recuadro -->
+
 
       <div class="product-content">
         <div class="specs-grid">
@@ -59,7 +67,7 @@ function renderProduct(product) {
             <span class="spec-label">Ancho (cm)</span>
           </div>
           ${
-            product.jets && product.motor !== 0
+            product.jets && product.jets !== "N/A"
               ? `
           <div class="spec-item">
             <span class="spec-value">${product.jets}</span>
@@ -91,6 +99,7 @@ function renderProduct(product) {
     </div>
   `;
 }
+
 
 
 function renderProducts(products) {

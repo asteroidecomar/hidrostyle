@@ -534,3 +534,21 @@ nav {
     padding-bottom: 10rem; /* espacio extra para que no se corte el botón */
   }
 }
+
+.product-image-wrapper {
+  width: 75%;
+  height: 125px; /* puedes ajustar el alto */
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* mantiene proporción sin recortar */
+}
