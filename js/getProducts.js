@@ -41,6 +41,7 @@ async function loadProducts() {
 // Render productos
 // ========================
 function renderProduct(product) {
+  console.log(product);
   return `
     <div class="product-card">
       <div class="product-header">
