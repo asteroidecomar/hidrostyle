@@ -203,6 +203,8 @@ body {
   margin-bottom: 0.5rem;
 }
 .product-size { font-size: 1.1rem; opacity: 0.9; }
+
+/* ================= PRODUCT VISUAL CON IMAGEN ================= */
 .product-visual {
   height: 200px;
   background: linear-gradient(45deg, var(--primary-blue), var(--accent-cyan));
@@ -211,25 +213,47 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 1.5rem;
 }
-.product-visual::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 40%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
-}
+
+/* ELIMINAR COMPLETAMENTE EL EMOJI */
+.product-visual::before,
 .product-visual::after {
-  content: '🛁';
-  font-size: 3rem;
-  position: relative;
-  z-index: 2;
+  display: none !important;
+  content: none !important;
 }
+
+/* IMAGEN CON TAMAÑO UNIFORME Y FONDO BLANCO */
+.product-visual-image {
+  width: 75%;        /* Ancho fijo */
+  height: 120px;       /* Alto fijo */
+  object-fit: contain; /* Mantiene proporción sin recortar */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  
+  /* Fondo blanco sólido para todas las imágenes */
+  background: white;
+  padding: 0.8rem;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Si la imagen no carga, mostrar placeholder */
+  border: 1px solid #e2e8f0;
+}
+
+/* Placeholder cuando no hay imagen */
+.product-visual-image:not([src]),
+.product-visual-image[src=""],
+.product-visual-image[src*="placeholder"] {
+  background: white url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23cbd5e0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>') no-repeat center;
+  background-size: 40px 40px;
+}
+
+/* Hover effect más sutil */
+.product-card:hover .product-visual-image {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 .product-content { padding: 2rem; }
 
 .specs-grid {
@@ -355,9 +379,33 @@ body {
   .product-actions { flex-direction: column; }
   .specs-grid { grid-template-columns: 1fr; }
 
+  /* Responsive - mantener proporción en mobile */
+  .product-visual {
+    height: 180px;
+    padding: 1rem;
+  }
+  
+  .product-visual-image {
+    width: 140px;
+    height: 105px;
+    padding: 0.6rem;
+  }
+
   /* Fix de corte en mobile */
   .products-section,
   .products-grid,
   .container { overflow: visible !important; }
   .products-section { padding-bottom: 6rem !important; }
+}
+
+/* ================= RESPONSIVE PARA IMÁGENES ================= */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .product-visual-image {
+    width: 170px !important;
+    height: 127px !important;
+    min-width: 170px;
+    min-height: 127px;
+    max-width: 170px;
+    max-height: 127px;
+  }
 }
