@@ -45,17 +45,15 @@ function renderProduct(product) {
   return `
     <div class="product-card">
       <div class="product-header">
+        <span class="product-category">${product.category || "-"}</span>
         <h3 class="product-name">${product.name}</h3>
-        <span class="product-category">${product.category || "-"}</span>      <div class="product-image">
-        <div class="product-image-wrapper">
-          <img src="${product.image_url || `../img/placeholder-${PRODUCT_TYPE}.png`}" 
-              alt="${product.name}" />
-        </div>
-      </div>
       </div>
 
-      <!-- Imagen en recuadro -->
-
+      <div class="product-visual">
+        <img src="${product.image_url || `../img/placeholder-${PRODUCT_TYPE}.png`}" 
+             alt="${product.name}" 
+             class="product-visual-image" />
+      </div>
 
       <div class="product-content">
         <div class="specs-grid">
